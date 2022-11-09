@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function add(){
+            var var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12,var13,var14;
+            var1 = parseInt(document.getElementById("var1").value);
+            var2 = parseInt(document.getElementById("var2").value);
+            var3 = parseInt(document.getElementById("var3").value);
+            var4 = parseInt(document.getElementById("var4").value);
+            var5 = parseInt(document.getElementById("var5").value);
+            var6 = parseInt(document.getElementById("var6").value);
+            var7 = parseInt(document.getElementById("var7").value);
+            var8 = parseInt(document.getElementById("var8").value);
+            var9 = parseInt(document.getElementById("var9").value);
+            var10 = parseInt(document.getElementById("var10").value);
+            var11= parseInt(document.getElementById("var11").value);
+            var12 = parseInt(document.getElementById("var12").value);
+            var13 = parseInt(document.getElementById("var13").value);
+            var14 = parseInt(document.getElementById("var14").value);
+            
+            sum1=var1+var2;
+            sum2=var3+var4;
+            sum3=var5+var6;
+            sum4=var7+var8;
+            sum5=var9+var10;
+            sum6=var11+var12;
+            sum7=var13+var14;
+            
+            sc1=(var1/var1+var2)*100;
+            sc2=(var3/var3+var4)*100;
+            sc3=(var5/var5+var6)*100;
+            sc4=(var7/var7+var8)*100;
+            sc5=(var9/var9+var10)*100;
+            sc6=(var11/var11+var12)*100;
+            sc7=(var13/var13+var14)*100;
+
+
+            csum1=var1+var3+var5+var7+var9+var11+var13;
+            csum2=var2+var4+var6+var8+var10+var12+var14;
+            csum3=csum1+csum2;
+            csum4=sc1+sc2+sc3+sc4+sc5+sc6+sc7;
+            
+            document.getElementById("var1+var2").innerHTML = sum1;
+            document.getElementById("var3+var4").innerHTML = sum2;
+            document.getElementById("var5+var6").innerHTML = sum3;
+            document.getElementById("var7+var8").innerHTML = sum4;
+            document.getElementById("var9+var10").innerHTML = sum5;
+            document.getElementById("var11+var12").innerHTML = sum6;
+            document.getElementById("var13+var14").innerHTML = sum7;
+
+            document.getElementById("(var1/var1+var2)*100").innerHTML = sc1;
+            document.getElementById("(var3/var3+var4)*100").innerHTML = sc2;
+            document.getElementById("(var5/var5+var6)*100").innerHTML = sc3;
+            document.getElementById("(var7/var7+var8)*100").innerHTML = sc4;
+            document.getElementById("(var9/var9+var10)*100").innerHTML = sc5;
+            document.getElementById("(var11/var11+var12)*100").innerHTML = sc6;
+            document.getElementById("(var13/var13+var14)*100").innerHTML = sc7;
+
+            document.getElementById("var1+var3+var5+var7+var9+var11+var13").innerHTML = csum1;
+            document.getElementById("var2+var4+var6+var8+var10+var12+var14").innerHTML = csum2;
+            document.getElementById("var1+var2+var3+var4+var5+var6+var7+var8+var9+var10+var11+var12+var13+var14").innerHTML = csum3;
+            document.getElementById("sc1+sc2+sc3+sc4+sc5+sc6+sc7").innerHTML = csum4;
+
+           
+        }
+    </script>
+</head>
+<body>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="input-group mb-3">
+                <table id="myTable" class="table table-striped table-bordered table-hover text-center" style="margin-top: 100px; margin-left: 50%; padding: 30px 0px 0px 0px;">
+                    <thead>
+                        <tr style="background-color: #4472c4; color:white;">
+                          <th scope="col">Year</th>
+                          <th scope="col">Scolarship Students</th>
+                          <th scope="col">Non scholar</th>
+                          <th scope="col">Total Strength</th>
+                          <th scope="col">% Of Scolarship</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row">
+                            <td>2020-21</td>
+                            <td><input type="text" id="var1" /></td>
+                            <td><input type="text" id="var2" /></td>
+                            <td><p><span id="var1+var2" style="display: block;"></span></p></td> 
+                            <td><p><span id="(var1/var1+var2)*100" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>2021-22</td>
+                            <td><input type="text" id="var3" /></td>
+                            <td><input type="text" id="var4" /></td>
+                            <td><p><span id="var3+var4" style="display: block;"></span></p></td>
+                            <td><p><span id="(var3/var3+var4)*100" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>2022-23</td>
+                            <td><input type="text" id="var5" /></td>
+                            <td><input type="text" id="var6" /></td>
+                            <td><p><span id="var5+var6" style="display: block;"></span></p></td>
+                            <td><p><span id="(var5/var5+var6)*100" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>I Year</td>
+                            <td><input type="text" id="var7" /></td>
+                            <td><input type="text" id="var8" /></td>
+                            <td><p><span id="var7+var8" style="display: block;"></span></p></td>
+                            <td><p><span id="(var7/var7+var8)*100" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>II Year</td>
+                            <td><input type="text" id="var9" /></td>
+                            <td><input type="text" id="var10" /></td>
+                            <td><p><span id="var9+var10" style="display: block;"></span></p></td>
+                            <td><p><span id="(var9/var9+var10)*100" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>III Year</td>
+                            <td><input type="text" id="var11" /></td>
+                            <td><input type="text" id="var12" /></td>
+                            <td><p><span id="var11+var12" style="display: block;"></span></p></td>
+                            <td><p><span id="(var11/var11+var12)*100" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>IV Year</td>
+                            <td><input type="text" id="var13" /></td>
+                            <td><input type="text" id="var14" /></td>
+                            <td><p><span id="var13+var14" style="display: block;"></span></p></td>
+                            <td><p><span id="(var13/var13+var14)*100" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td><p><span id="var1+var3+var5+var7+var9+var11+var13" style="display: block;"></span></p></td> 
+                            <td><p><span id="var2+var4+var6+var8+var10+var12+var14" style="display: block;"></span></p></td> 
+                            <td><p><span id="var1+var2+var3+var4+var5+var6+var7+var8+var9+var10+var11+var12+var13+var14" style="display: block;"></span></p></td> 
+                            <td><p><span id="sc1+sc2+sc3+sc4+sc5+sc6+sc7" style="display: block;"></span></p></td> 
+                            
+                        </tr>
+                    </tbody>
+                </table>
+                <a type="button" href="" name="log" id="log" value="Total">Total</a>
+                <a type="button" href="options7.html" name="log" id="log" value="Next">Next</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
