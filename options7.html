@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function add(){
+            var var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12;
+            var1 = parseInt(document.getElementById("var1").value);
+            var2 = parseInt(document.getElementById("var2").value);
+            var3 = parseInt(document.getElementById("var3").value);
+            var4 = parseInt(document.getElementById("var4").value);
+            var5 = parseInt(document.getElementById("var5").value);
+            var6 = parseInt(document.getElementById("var6").value);
+            var7 = parseInt(document.getElementById("var7").value);
+            var8 = parseInt(document.getElementById("var8").value);
+            var9 = parseInt(document.getElementById("var9").value);
+            var10 = parseInt(document.getElementById("var10").value);
+            var11= parseInt(document.getElementById("var11").value);
+            var12 = parseInt(document.getElementById("var12").value);
+            
+            sum1=var2-var3;
+            sum2=var5-var6;
+            sum3=var8-var9;
+            sum4=var11-var12;
+            csum1=var1+var4+var7+var10;
+            csum2=var2+var5+var8+var11;
+            csum3=var3+var6+var9+var12;
+            csum4=sum1+sum2+sum3+sum4;
+
+            document.getElementById("var2-var3").innerHTML = sum1;
+            document.getElementById("var5-var6").innerHTML = sum2;
+            document.getElementById("var8-var9").innerHTML = sum3;
+            document.getElementById("var11-var12").innerHTML = sum4;
+
+            document.getElementById("var1+var4+var7+var10").innerHTML = csum1;
+            document.getElementById("var2+var5+var8+var11").innerHTML = csum2;
+            document.getElementById("var3+var6+var9+var12").innerHTML = csum3;
+            document.getElementById("sum1+sum2+sum3+sum4").innerHTML = csum4;
+        }
+    </script>
+
+
+    
+</head>
+<body>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="input-group mb-3">
+                <table id="myTable" class="table table-striped table-bordered table-hover text-center" style="margin-top: 100px; margin-left: 50%; padding: 30px 0px 0px 0px;">
+                    <thead>
+                        <tr style="background-color: #4472c4; color:white;">
+                          <th scope="col">Year</th>
+                          <th scope="col">No Of Students</th>
+                          <th scope="col">Fee Committed</th>
+                          <th scope="col">Fee Paid</th>
+                          <th scope="col">Fee Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row">
+                            <td>Previous Balance</td>
+                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" name="fname" /></td>
+                        </tr>
+                        <tr scope="row">
+                            <td>2022-23</td>
+                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" name="fname" /></td>
+                        </tr>
+                        <tr scope="row">
+                            <td>I Year</td>
+                            <td><input type="text" id="var1" /></td>
+                            <td><input type="text" id="var2" /></td>
+                            <td><input type="text" id="var3" /></td>
+                            <td><p><span id="var2-var3" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>II Year</td>
+                            <td><input type="text" id="var4" /></td>
+                            <td><input type="text" id="var5" /></td>
+                            <td><input type="text" id="var6" /></td>
+                            <td><p><span id="var5-var6" style="display: block;"></span></p></td> 
+                            
+                        </tr>
+                        <tr scope="row">
+                            <td>III Year</td>
+                            <td><input type="text" id="var7" /></td>
+                            <td><input type="text" id="var8" /></td>
+                            <td><input type="text" id="var9" /></td>
+                            <td><p><span id="var8-var9" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>IV Year</td>
+                            <td><input type="text" id="var10" /></td>
+                            <td><input type="text" id="var11" /></td>
+                            <td><input type="text" id="var12" /></td>
+                            <td><p><span id="var11-var12" style="display: block;"></span></p></td> 
+                        </tr>
+                        <tr scope="row">
+                            <td>TOTAL</td>
+                            <td><p><span id="var1+var4+var7+var10" style="display: block;"></span></p></td> 
+                            <td><p><span id="var2+var5+var8+var11" style="display: block;"></span></p></td> 
+                            <td><p><span id="var3+var6+var9+var12" style="display: block;"></span></p></td> 
+                            <td><p><span id="sum1+sum2+sum3+sum4" style="display: block;"></span></p></td> 
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="buttons">
+                    <button href="" name="log" id="log" value="Total" onclick ="add()"  >Total</button>
+                    <a type="button" href="options8.html" name="log" id="log" value="Next">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
